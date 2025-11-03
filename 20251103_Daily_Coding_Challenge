@@ -1,0 +1,13 @@
+def count_words(sentence):
+    
+    return len(sentence.split(" "))
+
+print(count_words("Hello world"),count_words("The quick brown fox jumps over the lazy dog."),count_words("I like coding challenges!"),count_words("Complete the challenge in JavaScript and Python."),count_words("The missing semi-colon crashed the entire internet."))
+
+
+function countWords(sentence) {
+
+  return sentence.split(" ").length;
+}
+
+console.log(countWords("Hello world"),countWords("The quick brown fox jumps over the lazy dog."),countWords("I like coding challenges!"),countWords("Complete the challenge in JavaScript and Python."),countWords("The missing semi-colon crashed the entire internet."))
