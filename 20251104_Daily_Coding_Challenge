@@ -1,0 +1,8 @@
+def image_search(images, term):
+    search_results = []
+    for item in images:
+        if term.lower() in item.lower():
+            search_results.append(item)
+    return search_results
+
+print(image_search(["dog.png", "cat.jpg", "parrot.jpeg"], "dog"),image_search(["Sunset.jpg", "Beach.png", "sunflower.jpeg"], "sun"),image_search(["Moon.png", "sun.jpeg", "stars.png"], "PNG"),image_search(["cat.jpg", "dogToy.jpeg", "kitty-cat.png", "catNip.jpeg", "franken_cat.gif"], "Cat"))
