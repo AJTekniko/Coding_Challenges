@@ -1,0 +1,22 @@
+PYTHON:
+def build_matrix(rows, cols):
+    matrix = [[0 for row in range(cols)] for col in range(rows)] 
+    return matrix
+
+print(build_matrix(2, 3), build_matrix(3, 2), build_matrix(4, 3), build_matrix(9, 1))
+
+
+JAVASCRIPT:
+function buildMatrix(rows, cols) {
+  const myArray1 = [];
+  for (let i = 0; i < rows; i++) {
+    myArray1[i] = [];
+    for (let j = 0; j < cols; j++){
+        myArray1[i][j] = 0;
+      }
+  }
+  return myArray1;
+
+}
+
+console.log(buildMatrix(2, 3),buildMatrix(3, 2),buildMatrix(4, 3),buildMatrix(9, 1))
