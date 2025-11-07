@@ -1,0 +1,23 @@
+PYTHON:
+from datetime import datetime
+
+def get_weekday(date_string):
+    year = int(date_string[0:4])
+    month = int(date_string[5:7])
+    day = int(date_string[8:10])
+    date_obj = datetime(year, month, day)
+    day_of_week = date_obj.strftime('%A')
+    return day_of_week
+
+print(get_weekday("2025-11-06"),get_weekday("1999-12-31"),get_weekday("1111-11-11"),get_weekday("2112-12-21"),get_weekday("2345-10-01"))
+
+
+JAVASCRIPT:
+function getWeekday(dateString) {
+  const date = new Date(dateString.replace(/-/g, '\/'));
+  const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const dayOfWeek = daysOfWeek[date.getDay()];
+  return dayOfWeek;
+}
+
+console.log(getWeekday("2025-11-06"), getWeekday("1999-12-31"), getWeekday("1111-11-11"), getWeekday("2112-12-21"), getWeekday("2345-10-01"))
