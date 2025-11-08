@@ -1,0 +1,42 @@
+PYTHON:
+def factorial(num):
+    if num == 0 or num == 1:
+        return 1;
+  
+    result = 1
+    for i in range (2, num + 1):
+        result *= i
+    
+    return result
+
+def combinations(r):
+    totalCards = 52;
+    if r < 0 or r > totalCards:
+        return 0
+
+    return factorial(totalCards) / (factorial(r) * factorial(totalCards - r))
+
+print(combinations(52),combinations(1),combinations(2),combinations(5),combinations(10),combinations(50))
+
+
+JAVASCRIPT:
+function factorial(num) {
+  if (num === 0 || num === 1) {
+    return 1;
+  }
+  let result = 1;
+  for (let i = 2; i <= num; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+function combinations(r) {
+  const totalCards = 52;
+  if (r < 0 || r > totalCards) {
+    return 0; // Invalid input for combinations
+  }
+  return factorial(totalCards) / (factorial(r) * factorial(totalCards - r));
+}
+
+console.log(combinations(52),combinations(1),combinations(2),combinations(5),combinations(10),combinations(50))
