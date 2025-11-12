@@ -1,0 +1,24 @@
+#PYTHON
+def count(s):
+    arreglo = []
+    vocales = len([c for c in s.lower() if c in 'aeiou'])
+    consonantes = len([c for c in s.lower() if c in 'bcdfghjklmnpqrstvwxyz'])
+    arreglo.append(vocales)
+    arreglo.append(consonantes)
+    return arreglo
+
+print(count("Hello World"), count("JavaScript"), count("Python"), count("freeCodeCamp"), count("Hello, World!"), count("The quick brown fox jumps over the lazy dog."))
+
+
+//JAVASCRIPT
+function count(str) {
+  let total = [];
+  const vocales = str.match(/[aeiou]/gi);
+  const consonantes = str.match(/[bcdfghjklmnpqrstvwxyz]/gi);
+  vocales ? total.push(vocales.length) : 0;
+  consonantes ? total.push(consonantes.length) : 0;
+  
+  return total
+}
+
+console.log(count("Hello World"), count("JavaScript"), count("Python"), count("freeCodeCamp"), count("The quick brown fox jumps over the lazy dog."));
