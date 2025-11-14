@@ -1,0 +1,30 @@
+#PYTHON
+def shift_array(arr, k):
+    if not arr:
+        return arr
+    k %= len(arr)
+    return arr[k:] + arr[:k]
+
+print(shift_array([1, 2, 3], 1), shift_array([1, 2, 3], -1), shift_array(["alpha", "bravo", "charlie"], 5),shift_array(["alpha", "bravo", "charlie"], -11),shift_array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 15))
+
+
+//JAVASCRIPT
+function shiftArray(arr, shifts) {
+  if (shifts >= 0) {
+  shifts = shifts % arr.length;
+    for (let i = 0; i < shifts; i++) {
+    let element = arr.shift();
+    arr.push(element);
+    }
+  }
+  else {
+    shifts = Math.abs(shifts) % arr.length;
+    for (let i = 0; i < shifts; i++) {
+    let element = arr.pop();
+    arr.unshift(element);
+    }  
+  }
+  return arr;
+}
+
+console.log(shiftArray([1, 2, 3], 1), shiftArray([1, 2, 3], -1), shiftArray(["alpha", "bravo", "charlie"], 5), shiftArray(["alpha", "bravo", "charlie"], -11), shiftArray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 15));
