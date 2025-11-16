@@ -1,0 +1,30 @@
+#PYTHON
+def gcd(x, y):
+    pequeno = 0
+    if x < y:
+        pequeno = x
+    else:
+        pequeno = y
+
+    mcd = 0
+    for i in range(1, pequeno + 1):
+        if x % i == 0 and y % i == 0:
+            mcd = i
+
+    return mcd
+
+print(gcd(4, 6), gcd(20, 15), gcd(13, 17), gcd(654, 456), gcd(3456, 4320))
+
+
+//JAVASCRIPT
+function gcd(num1, num2) {
+    let hcf = 0
+    for(let i = 1; i <= num1 && i <= num2; i++) {
+        if(num1 % i == 0 && num2 % i == 0) {
+            hcf = i;
+        }
+    }
+    return hcf;
+}
+
+console.log(gcd(4, 6), gcd(20, 15), gcd(13, 17), gcd(654, 456), gcd(3456, 4320))
