@@ -18,9 +18,11 @@ function toggleChar(cadena, alternacion) {
         if (caracter.toLowerCase() !== caracter.toUpperCase()) {
         cuenta += 1
         }
-      } else if (caracter.toLowerCase() !== caracter.toUpperCase()) {
+      } else {
         resultado += caracter.toLowerCase();
+        if (caracter.toLowerCase() !== caracter.toUpperCase()) {
         cuenta += 1
+        }
       }
     }
   } else {
